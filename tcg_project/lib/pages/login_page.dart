@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -18,43 +20,55 @@ class _LoginPageState extends State<LoginPage> {
         home: Scaffold(
       backgroundColor: Colors.teal,
       body: SafeArea(
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.red,
-                child: Text("Hello"),
+              CircleAvatar(
+              radius: 50,
+              foregroundImage: AssetImage("assests/images/photo.jpeg"),
+            ),
+              Text(
+                  "Amar Singh",
+                      style: TextStyle(
+                        fontFamily: "Pacifico",
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold
+                      ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    // margin: EdgeInsets.symmetric(vertical: 20),
-                    color: Colors.yellow,
-                    child: Text("Hello"),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    // margin: EdgeInsets.symmetric(vertical: 20),
-                    color: Colors.greenAccent,
-                    child: Text("Hello"),
-                  ),
-                ],
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.black,
+                ),
               ),
               Container(
-                height: 100,
-                width: 100,
-                // margin: EdgeInsets.symmetric(vertical: 20),
-                color: Colors.blue,
-                child: Text("Hello"),
-              )
+                color: Colors.cyan,
+                margin: EdgeInsets.fromLTRB(40, 20, 40, 0),
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                        Icon(Icons.email),
+                        Text("singh.amarpune@gmail.com")
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.cyan,
+                margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.pin_drop_rounded),
+                    Text("Mumbai, Maharashtra, India")
+                  ],
+                ),
+              ),
             ]),
+
       ),
     ));
   }

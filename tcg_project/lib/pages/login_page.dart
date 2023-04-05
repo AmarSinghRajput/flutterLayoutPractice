@@ -43,32 +43,23 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.black,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.cyan,
                 margin: EdgeInsets.fromLTRB(40, 20, 40, 0),
-                padding: EdgeInsets.symmetric(vertical: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                        Icon(Icons.email),
-                        Text("singh.amarpune@gmail.com")
-                  ],
+                child: ListTile(
+                  leading: Icon(Icons.email),
+                  title: Text("singh.amarpune@gmail.com")
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.cyan,
-                margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                padding: EdgeInsets.symmetric(vertical: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.pin_drop_rounded),
-                    Text("Mumbai, Maharashtra, India")
-                  ],
+                margin: EdgeInsets.fromLTRB(40, 20, 40, 0),
+                child: ListTile(
+                    leading: Icon(Icons.email),
+                    title: Text("singh.amarpune@gmail.com")
                 ),
               ),
             ]),
-
       ),
     ));
   }

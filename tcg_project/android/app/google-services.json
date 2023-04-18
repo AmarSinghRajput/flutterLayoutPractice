@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "481587005442",
+    "project_id": "tcgpoc-b4144",
+    "storage_bucket": "tcgpoc-b4144.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481587005442:android:00753981357b0a98c8ff1b",
+        "android_client_info": {
+          "package_name": "com.example.tcgproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481587005442-u863e7vbq5vfffh5g62e1leek33ce0q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfPJfWfCurGIkJ2klun0X_s4q5a6RIH-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481587005442-u863e7vbq5vfffh5g62e1leek33ce0q0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

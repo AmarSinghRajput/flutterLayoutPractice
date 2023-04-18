@@ -1,4 +1,4 @@
-package com.example.tcg_project
+package com.example.tcgproject
 
 import io.flutter.embedding.android.FlutterActivity
 

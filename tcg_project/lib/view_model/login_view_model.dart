@@ -26,11 +26,12 @@ class LoginViewModel with ChangeNotifier {
     _loginRepo.loginApi(data).then((value) {
       // print(value);
       setLoading(false);
-      
+
       final userPreference = Provider.of<UserProvider>(context, listen: false);
       userPreference.saveUser(
           LoginModel(
-              token: value['access_token'].toString()
+              token: value['access_token'].toString(),
+              refreshToken: value['refresh_token'].toString(),
           )
       );
 

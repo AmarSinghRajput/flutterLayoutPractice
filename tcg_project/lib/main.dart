@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:tcg_project/view_model/dashboard_view_model.dart';
 import 'view/login_page.dart';
 import '../view_model/login_view_model.dart';
 import 'provider/user_provider.dart';
@@ -21,7 +22,8 @@ class TCGApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => LoginViewModel()),
-        ChangeNotifierProvider(create: (_) => UserProvider())
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => DashboardViewModel()),
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,

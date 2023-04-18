@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-
 import '../utilities/shared_preferance.dart';
+import 'package:tcg_project/view_model/dashboard_view_model.dart';
+import 'package:provider/provider.dart';
 
 class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final _dashboardViewModel = Provider.of<DashboardViewModel>(context);
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false, // set to false to remove back button
@@ -29,9 +33,11 @@ class DashboardPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
-                print("call refresh token");
+                _dashboardViewModel.refreshTokenApi(context);
               },
-              child: Text('refresh token'),
+              child: _dashboardViewModel.loading ? CircularProgressIndicator(
+                color: Colors.red,
+              ) : Text('refresh token'),
             ),
             SizedBox(height: 20),
             ElevatedButton(

@@ -10,16 +10,19 @@ class UserProvider with ChangeNotifier{
 
     final SharedPreferences sp = await SharedPreferences.getInstance();
     sp.setString('token', user.token.toString());
+    sp.setString('refreshToken', user.refreshToken.toString());
     notifyListeners();
     return true ;
   }
 
-  Future<LoginModel> getUser()async{
+  Future<LoginModel> getUser() async {
 
     final SharedPreferences sp = await SharedPreferences.getInstance();
     final String? token = sp.getString('token');
+    final String? refreshToken = sp.getString('refreshToken');
     return LoginModel(
-        token: token.toString()
+        token: token.toString(),
+        refreshToken: refreshToken.toString()
     );
   }
 
